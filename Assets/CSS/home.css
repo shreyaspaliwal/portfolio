@@ -1,88 +1,690 @@
-.home{
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.home {
     background-color: #000;
     overflow: hidden;
+    color: #F5F5F5;
 }
 
-.home__container{
+.hero__container {
+    width: min(1440px, calc(100% - 8rem));
+    min-height: calc(100vh - var(--header-height));
+
+    margin: 0 auto;
+    padding: 5.5rem 0 5rem;
+
+    display: grid;
+    grid-template-columns: minmax(0, 48fr) minmax(0, 52fr);
+    gap: 5rem;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   HERO LEFT CONTENT
+   ========================================================= */
+
+.hero__content {
+    min-width: 0;
     position: relative;
-    height: calc(100vh - var(--header-height));
-    grid-template-rows: repeat(2, max-content);
-    align-content: space-around;
-    row-gap: 2rem;
+    z-index: 2;
 }
 
-.home__data{
-    border-left: 4px solid var(--first-color-lighten);
-    color: var(--first-color-lighten);
-    padding-left: 1.5rem;
-    z-index: var(--z-tooltip);
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.hero__profile {
+    margin-bottom: 1.75rem;
 }
 
-.home__name{
-    font-size: 30px;
-}
-
-.home__greeting, .home__profession{
+.hero__profile-image {
     display: block;
-    font-weight: var(--font-bold);
-}
 
-.home__greeting{
-    font-size: .813rem;
-}
+    width: 158px;
+    height: 158px;
 
-.home__profession{
-    font-size: .738rem;
-    margin-bottom: var(--mb-3);
-}
-
-.home__img{
-    position: absolute;
-    top: 25%;
-    bottom: 25%;
-    /*display: block;*/
-    margin-left: 50%;
-    margin-right: 20%;
-    /*width: 100%;*/
-}
-
-.home__img img{
     border-radius: 50%;
+    border: 4px solid #C9A45C;
+
+    object-fit: cover;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(201, 164, 92, 0.12);
 }
 
-.home__social{
+
+/* =========================================================
+   HERO EYEBROW
+   ========================================================= */
+
+.hero__eyebrow {
+    display: block;
+
+    margin-bottom: 1.25rem;
+
+    color: #C9A45C;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   HERO TYPOGRAPHY
+   ========================================================= */
+
+.hero__headline {
+    margin: 0;
+
+    font-family: "DM Serif Display", Georgia, serif;
+
+    font-size: clamp(3.75rem, 5.25vw, 4.5rem);
+    font-weight: 400;
+
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+
+    max-width: 850px;
+}
+
+.hero__line {
+    display: block;
+}
+
+.hero__line--white {
+    color: #F5F5F5;
+}
+
+.hero__line--gold {
+    color: #C9A45C;
+}
+
+.hero__line--gray {
+    color: #B8B8B8;
+}
+
+.hero__accent {
+    color: #C9A45C;
+}
+
+.hero__multiply {
+    color: #F5F5F5;
+    margin: 0 0.08em;
+}
+
+.hero__headline em {
+    color: #F5F5F5;
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.hero__description {
+    max-width: 550px;
+
+    margin: 2rem 0 0;
+
+    color: #D0D0D0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.08rem;
+    font-weight: 400;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   CTA BUTTONS
+   ========================================================= */
+
+.hero__actions {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+
+    margin-top: 2rem;
 }
 
-.home__social-icon{
-    width: max-content;
-    font-size: 1.3rem;
-    margin-bottom: var(--mb-2);
-    color: var(--first-color-lighten);
-    cursor: pointer;
+.hero__button {
+    min-height: 60px;
+
+    padding: 0 1.5rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+
+    border-radius: 11px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.84rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background-color 250ms ease,
+        border-color 250ms ease,
+        color 250ms ease,
+        transform 250ms ease,
+        box-shadow 250ms ease;
 }
 
-.home__social-icon:hover{
-    color: var(--first-color-light);
+.hero__button span {
+    font-size: 1.1rem;
+    transition: transform 250ms ease;
 }
 
-/*--Button--*/
-.button{
-    display: inline-block;
-    background-color: var(--first-color);
-    color: var(--first-color-lighten);
-    padding: .75rem 1rem;
-    border-radius: .25rem;
-    transition: .3s;
+.hero__button:hover {
+    transform: translateY(-2px);
 }
 
-.button:hover{
-    background-color: var(--first-color-dark);
+.hero__button:hover span {
+    transform: translateX(3px);
 }
 
-.button-light{
-    background-color: var(--first-color-light);
-    padding: .75rem 2.75rem;
-    font-size: 18px;
+
+/* Primary CTA */
+
+.hero__button--primary {
+    background: #17130D;
+    border: 1px solid rgba(201, 164, 92, 0.55);
+
+    color: #F5F5F5;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.hero__button--primary:hover {
+    background: #241D13;
+    border-color: #C9A45C;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+
+/* Secondary CTA */
+
+.hero__button--secondary {
+    background: transparent;
+    border: 1px solid #C9A45C;
+
+    color: #F5F5F5;
+}
+
+.hero__button--secondary:hover {
+    background: rgba(201, 164, 92, 0.12);
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+   ========================================================= */
+
+.hero__social {
+    flex-direction: row;
+    gap: 1rem;
+
+    margin-top: 2rem;
+}
+
+.hero__social .home__social-icon {
+    margin-bottom: 0;
+
+    color: #888;
+    font-size: 1.25rem;
+
+    transition:
+        color 200ms ease,
+        transform 200ms ease;
+}
+
+.hero__social .home__social-icon:hover {
+    color: #C9A45C;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   IMPACT METRICS
+   ========================================================= */
+
+.hero__metrics {
+    width: 100%;
+
+    background: #090909;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Individual metric row */
+
+.metric-card {
+    min-height: 190px;
+
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 1.5rem;
+
+    padding: 2rem 2.25rem;
+
+    position: relative;
+
+    background: #090909;
+
+    transition:
+        background-color 250ms ease;
+}
+
+.metric-card + .metric-card {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metric-card:hover {
+    background: #101010;
+}
+
+
+/* Accent line */
+
+.metric-card::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+
+    opacity: 0.95;
+}
+
+
+/* =========================================================
+   METRIC COLORS
+   ========================================================= */
+
+.metric-card--blue {
+    --metric-color: #3B82F6;
+}
+
+.metric-card--orange {
+    --metric-color: #F59E0B;
+}
+
+.metric-card--green {
+    --metric-color: #22C55E;
+}
+
+.metric-card::before {
+    background: var(--metric-color);
+}
+
+
+/* =========================================================
+   METRIC ICON
+   ========================================================= */
+
+.metric-card__icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--metric-color);
+
+    border: 1px solid color-mix(
+        in srgb,
+        var(--metric-color) 35%,
+        transparent
+    );
+
+    background: color-mix(
+        in srgb,
+        var(--metric-color) 7%,
+        transparent
+    );
+
+    border-radius: 10px;
+
+    margin-top: 0.1rem;
+}
+
+.metric-card__icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+
+/* =========================================================
+   METRIC CONTENT
+   ========================================================= */
+
+.metric-card__content {
+    min-width: 0;
+}
+
+.metric-card__category {
+    display: block;
+
+    margin-bottom: 0.3rem;
+
+    color: var(--metric-color);
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.66rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+}
+
+.metric-card__value {
+    margin: 0 0 0.65rem;
+
+    color: #F5F5F5;
+
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: clamp(2.5rem, 3.2vw, 3.35rem);
+    font-weight: 400;
+
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+}
+
+.metric-card__value span {
+    color: var(--metric-color);
+    margin: 0 0.04em;
+}
+
+.metric-card__description {
+    max-width: 540px;
+
+    margin: 0;
+
+    color: #AFAFAF;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.79rem;
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESPONSIVE — <= 1200px
+   ========================================================= */
+
+@media screen and (max-width: 1200px) {
+
+    .hero__container {
+        width: min(1200px, calc(100% - 5rem));
+        gap: 3rem;
+    }
+
+    .hero__headline {
+        font-size: clamp(3.4rem, 5vw, 4rem);
+    }
+
+    .metric-card {
+        padding: 1.75rem 1.75rem;
+        grid-template-columns: 60px minmax(0, 1fr);
+        gap: 1.2rem;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — <= 1000px
+   ========================================================= */
+
+@media screen and (max-width: 1000px) {
+
+    .hero__container {
+        width: min(760px, calc(100% - 4rem));
+
+        grid-template-columns: 1fr;
+
+        gap: 4rem;
+
+        padding-top: 4.5rem;
+        padding-bottom: 5rem;
+    }
+
+    .hero__headline {
+        max-width: 800px;
+        font-size: clamp(3.5rem, 7vw, 4.5rem);
+    }
+
+    .hero__metrics {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — <= 768px
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .hero__container {
+        width: calc(100% - 3rem);
+
+        gap: 3rem;
+
+        padding-top: 3.5rem;
+        padding-bottom: 4rem;
+    }
+
+    .hero__profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero__profile {
+        margin-bottom: 1.5rem;
+    }
+
+    .hero__eyebrow {
+        font-size: 0.65rem;
+        letter-spacing: 0.14em;
+    }
+
+    .hero__headline {
+        font-size: clamp(2.75rem, 8vw, 3.2rem);
+        line-height: 1;
+    }
+
+    .hero__description {
+        margin-top: 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .hero__actions {
+        margin-top: 1.5rem;
+    }
+
+    .hero__button {
+        min-height: 56px;
+    }
+
+    .metric-card {
+        min-height: 175px;
+
+        padding: 1.5rem;
+
+        grid-template-columns: 54px minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .metric-card__icon {
+        width: 46px;
+        height: 46px;
+    }
+
+    .metric-card__icon svg {
+        width: 23px;
+        height: 23px;
+    }
+
+    .metric-card__value {
+        font-size: 2.5rem;
+    }
+
+    .metric-card__description {
+        font-size: 0.74rem;
+        line-height: 1.55;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — <= 480px
+   ========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    .hero__container {
+        width: calc(100% - 2rem);
+
+        gap: 2.5rem;
+
+        padding-top: 2.75rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .hero__profile-image {
+        width: 112px;
+        height: 112px;
+    }
+
+    .hero__eyebrow {
+        margin-bottom: 1rem;
+
+        font-size: 0.58rem;
+        letter-spacing: 0.1em;
+    }
+
+    .hero__headline {
+        font-size: clamp(2.35rem, 10vw, 2.65rem);
+        line-height: 1.02;
+    }
+
+    .hero__description {
+        font-size: 0.88rem;
+        line-height: 1.6;
+    }
+
+    .hero__actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero__button {
+        width: 100%;
+        min-height: 54px;
+    }
+
+    .metric-card {
+        min-height: auto;
+
+        padding: 1.35rem 1.25rem;
+
+        grid-template-columns: 44px minmax(0, 1fr);
+        gap: 0.85rem;
+    }
+
+    .metric-card__icon {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 8px;
+    }
+
+    .metric-card__icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .metric-card__category {
+        font-size: 0.58rem;
+    }
+
+    .metric-card__value {
+        margin-bottom: 0.55rem;
+        font-size: 2.15rem;
+    }
+
+    .metric-card__description {
+        font-size: 0.7rem;
+    }
+
+    .hero__social {
+        margin-top: 1.5rem;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media screen and (max-width: 360px) {
+
+    .hero__container {
+        width: calc(100% - 1.5rem);
+    }
+
+    .hero__headline {
+        font-size: 2.15rem;
+    }
+
+    .metric-card {
+        grid-template-columns: 38px minmax(0, 1fr);
+        padding: 1.15rem 1rem;
+    }
+
+    .metric-card__icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .metric-card__value {
+        font-size: 1.95rem;
+    }
+
 }
