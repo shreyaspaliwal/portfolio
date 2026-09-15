@@ -1,4 +1,3 @@
-```css
 /* =========================================================
    HOME / HERO
    ========================================================= */
@@ -398,5 +397,676 @@
 
 /* ---------------------------------------------------------
    Section heading
-   --------------------------------------
+   --------------------------------------------------------- */
+
+.hero__impact-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 1.5rem;
+}
+
+.hero__impact-label {
+    display: block;
+
+    margin-bottom: .55rem;
+
+    color: #C9A45C;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: .65rem;
+    font-weight: 700;
+
+    letter-spacing: .18em;
+    line-height: 1.2;
+
+    text-transform: uppercase;
+}
+
+.hero__impact-header h2 {
+    margin: 0;
+
+    color: #F5F5F5;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   PROJECT LIST
+   ========================================================= */
+
+.hero__projects {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+
+/* =========================================================
+   INDIVIDUAL PROJECT CARD
+   ========================================================= */
+
+.project-card {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    min-height: 205px;
+
+    box-sizing: border-box;
+
+    padding: 1.5rem 1.6rem;
+
+    background-color: #0A0A0A;
+
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 12px;
+
+    color: #F5F5F5;
+    text-decoration: none;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background-color .25s ease;
+}
+
+
+/* ---------------------------------------------------------
+   Individual project accent
+   --------------------------------------------------------- */
+
+.project-card::before {
+    content: '';
+
+    position: absolute;
+
+    top: -1px;
+    left: 1.5rem;
+
+    width: 42px;
+    height: 2px;
+
+    border-radius: 0 0 2px 2px;
+
+    opacity: .7;
+
+    transition:
+        width .25s ease,
+        opacity .25s ease;
+}
+
+
+/* Project 01 — Blue */
+
+.project-card--blue::before {
+    background-color: #3B82F6;
+}
+
+
+/* Project 02 — Orange */
+
+.project-card--orange::before {
+    background-color: #F59E0B;
+}
+
+
+/* Project 03 — Green */
+
+.project-card--green::before {
+    background-color: #22C55E;
+}
+
+
+/* =========================================================
+   PROJECT NUMBER
+   ========================================================= */
+
+.project-card__number {
+    display: block;
+
+    margin-bottom: 1.15rem;
+
+    color: #777;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: .62rem;
+    font-weight: 600;
+
+    letter-spacing: .18em;
+    line-height: 1;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PROJECT CATEGORY + METRIC
+   ========================================================= */
+
+.project-card__heading {
+    display: flex;
+    align-items: flex-start;
+
+    gap: .9rem;
+}
+
+
+/* Icon */
+
+.project-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 34px;
+    height: 34px;
+
+    background-color: #0D0D0D;
+
+    border: 1px solid rgba(255, 255, 255, .10);
+    border-radius: 7px;
+
+    font-size: 1rem;
+}
+
+
+/* Accent icon colors */
+
+.project-card--blue .project-card__icon {
+    color: #3B82F6;
+}
+
+.project-card--orange .project-card__icon {
+    color: #F59E0B;
+}
+
+.project-card--green .project-card__icon {
+    color: #22C55E;
+}
+
+
+/* Category */
+
+.project-card__category {
+    display: block;
+
+    margin-bottom: .2rem;
+
+    color: #B8B8B8;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: .68rem;
+    font-weight: 700;
+
+    letter-spacing: .14em;
+    line-height: 1.2;
+
+    text-transform: uppercase;
+}
+
+
+/* Metric */
+
+.project-card__metric {
+    color: #F5F5F5;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 800;
+
+    letter-spacing: -.04em;
+    line-height: 1;
+}
+
+
+/* Blue metric arrow */
+
+.project-card--blue .project-card__metric span {
+    margin: 0 .08em;
+
+    color: #3B82F6;
+}
+
+
+/* =========================================================
+   PROJECT DESCRIPTION
+   ========================================================= */
+
+.project-card__description {
+    max-width: 470px;
+
+    margin: 1.2rem 0 1.25rem;
+
+    color: #9A9A9A;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: .73rem;
+    font-weight: 500;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   PROJECT FOOTER
+   ========================================================= */
+
+.project-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    padding-top: .85rem;
+
+    border-top: 1px solid rgba(255, 255, 255, .07);
+}
+
+
+/* Technology */
+
+.project-card__technology {
+    color: #626262;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: .56rem;
+    font-weight: 600;
+
+    letter-spacing: .1em;
+    line-height: 1.3;
+
+    text-transform: uppercase;
+}
+
+
+/* View Project */
+
+.project-card__link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: .35rem;
+
+    flex-shrink: 0;
+
+    color: #C9A45C;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: .66rem;
+    font-weight: 700;
+
+    letter-spacing: .02em;
+
+    white-space: nowrap;
+}
+
+
+/* View Project arrow */
+
+.project-card__arrow {
+    display: inline-block;
+
+    transition: transform .25s ease;
+}
+
+
+/* =========================================================
+   PROJECT CARD HOVER
+   ========================================================= */
+
+.project-card:hover {
+    transform: translateY(-3px);
+
+    background-color: #0D0D0D;
+
+    border-color: rgba(255, 255, 255, .22);
+}
+
+.project-card:hover::before {
+    width: 60px;
+    opacity: 1;
+}
+
+.project-card:hover .project-card__arrow {
+    transform: translateX(4px);
+}
+
+
+/* Keyboard accessibility */
+
+.project-card:focus-visible {
+    outline: 1px solid #C9A45C;
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   LEGACY HOME SOCIAL / BUTTON SUPPORT
+   =========================================================
+   
+   These classes are retained from the original home.css
+   to minimize impact on any existing markup elsewhere.
+   ========================================================= */
+
+.home__social {
+    display: flex;
+    flex-direction: column;
+}
+
+.home__social-icon {
+    width: max-content;
+
+    font-size: 1.3rem;
+
+    margin-bottom: var(--mb-2);
+
+    color: var(--first-color-lighten);
+
+    cursor: pointer;
+}
+
+.home__social-icon:hover {
+    color: var(--first-color-light);
+}
+
+
+/* Original global button */
+
+.button {
+    display: inline-block;
+
+    background-color: var(--first-color);
+
+    color: var(--first-color-lighten);
+
+    padding: .75rem 1rem;
+
+    border-radius: .25rem;
+
+    transition: .3s;
+}
+
+.button:hover {
+    background-color: var(--first-color-dark);
+}
+
+.button-light {
+    background-color: var(--first-color-light);
+
+    padding: .75rem 2.75rem;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET / SMALL DESKTOP
+   ========================================================= */
+
+@media screen and (max-width: 1200px) {
+
+    .hero__container {
+        width: min(1100px, calc(100% - 3rem));
+
+        gap: 3rem;
+    }
+
+    .hero__headline {
+        font-size: clamp(2.8rem, 4.8vw, 3.8rem);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media screen and (max-width: 1000px) {
+
+    .hero__container {
+        grid-template-columns: 1fr;
+
+        gap: 4rem;
+
+        padding: 4rem 0;
+    }
+
+    .hero__content {
+        max-width: 760px;
+    }
+
+    .hero__description {
+        max-width: 650px;
+    }
+
+    .hero__impact {
+        max-width: 760px;
+    }
+
+    .project-card {
+        min-height: 190px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE / LARGE TABLET
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .hero__container {
+        width: calc(100% - 2.5rem);
+
+        gap: 3rem;
+
+        padding: 3.5rem 0;
+    }
+
+    .hero__profile {
+        width: 130px;
+        height: 130px;
+
+        margin-bottom: 1.6rem;
+    }
+
+    .hero__profile-image {
+        width: 122px;
+        height: 122px;
+    }
+
+    .hero__profile-ring {
+        width: 122px;
+        height: 122px;
+    }
+
+    .hero__headline {
+        font-size: clamp(2.55rem, 8vw, 3.4rem);
+
+        letter-spacing: -.04em;
+    }
+
+    .hero__description {
+        margin-top: 1.5rem;
+
+        font-size: .86rem;
+    }
+
+    .hero__actions {
+        margin-top: 1.7rem;
+    }
+
+    .hero__meta {
+        margin-top: 1.7rem;
+    }
+
+    .hero__impact-header {
+        margin-bottom: 1.25rem;
+    }
+
+    .hero__projects {
+        gap: .9rem;
+    }
+
+    .project-card {
+        min-height: auto;
+
+        padding: 1.35rem 1.4rem;
+    }
+
+    .project-card__description {
+        max-width: none;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    .hero__container {
+        width: calc(100% - 2rem);
+
+        gap: 2.5rem;
+
+        padding: 3rem 0;
+    }
+
+    .hero__profile {
+        width: 112px;
+        height: 112px;
+    }
+
+    .hero__profile-image {
+        width: 104px;
+        height: 104px;
+    }
+
+    .hero__profile-ring {
+        width: 104px;
+        height: 104px;
+    }
+
+    .hero__eyebrow {
+        font-size: .57rem;
+        letter-spacing: .14em;
+    }
+
+    .hero__eyebrow-line {
+        width: 22px;
+    }
+
+    .hero__headline {
+        font-size: clamp(2.25rem, 11vw, 3rem);
+
+        line-height: 1.04;
+    }
+
+    .hero__description {
+        font-size: .78rem;
+        line-height: 1.7;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+
+        width: 100%;
+    }
+
+    .hero__button {
+        width: 100%;
+    }
+
+    .hero__meta {
+        gap: .6rem;
+
+        font-size: .5rem;
+    }
+
+    .hero__impact-header h2 {
+        font-size: .95rem;
+    }
+
+    .project-card {
+        padding: 1.25rem;
+
+        border-radius: 10px;
+    }
+
+    .project-card__number {
+        margin-bottom: 1rem;
+    }
+
+    .project-card__metric {
+        font-size: 1.55rem;
+    }
+
+    .project-card__description {
+        font-size: .7rem;
+
+        line-height: 1.6;
+    }
+
+    .project-card__footer {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: .65rem;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 390px) {
+
+    .hero__container {
+        width: calc(100% - 1.5rem);
+
+        padding: 2.5rem 0;
+    }
+
+    .hero__headline {
+        font-size: 2.15rem;
+    }
+
+    .hero__description {
+        font-size: .75rem;
+    }
+
+    .project-card {
+        padding: 1.1rem;
+    }
+
+    .project-card__icon {
+        width: 31px;
+        height: 31px;
+    }
+
+    .project-card__metric {
+        font-size: 1.45rem;
+    }
+
+    .project-card__technology {
+        font-size: .52rem;
+    }
+}
 ```
