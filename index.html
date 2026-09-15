@@ -54,28 +54,233 @@
         </header>
 
         <main class="l-main">
-            <!--Home-->
-            <section class="home" id="home">
-                <div class="home__container bd-container bd-grid">
-                    <div class="home__data">
-                        <span class="home__greeting">Hi, I am</span>
-                        <h1 class="home__name">Shreyas Paliwal</h1>
-                        <span class="home__profession">AI PRODUCT OWNER · ENTERPRISE AI · B2B SaaS</span>
-                        <span class="home__greeting">6+ years of experience owning end-to-end client engagements and product roadmaps in enterprise B2B/EDI integration environments</span>
-                        <a href="https://drive.google.com/file/d/1Hgs6rbRBo0BR9QSCwjh6pujZmynC7J9T/view?usp=sharing" class="button button1" target="blank"><i class='bx bxs-file-doc'></i> View Resume</a>
-                        
-                    </div>
+            <!--Home / Hero-->
+<section class="home" id="home">
+    <div class="hero__container">
 
-                    <div class="home__social">
-                        <a href="https://www.linkedin.com/in/shreyas-paliwal/" class="home__social-icon" target="blank"><i class='bx bxl-linkedin' ></i></a>
-                        <a href="https://github.com/shreyaspaliwal" class="home__social-icon" target="blank"><i class='bx bxl-github'></i></a>
-                    </div>
+        <!-- Hero Left -->
+        <div class="hero__content">
 
-                    <!--<div class="home__img">
-                        <img src="./Assets/Image/pp.jpg" alt="shreyaspaliwal">
-                    </div>-->
+            <div class="hero__profile">
+                <img
+                    src="/images/profile.jpg"
+                    alt="Shreyas Paliwal"
+                    class="hero__profile-image"
+                >
+            </div>
+
+            <span class="hero__eyebrow">
+                SENIOR PRODUCT MANAGER · AI &amp; B2B SAAS
+            </span>
+
+            <h1 class="hero__headline">
+                <span class="hero__line hero__line--white">
+                    Building products that
+                </span>
+
+                <span class="hero__line hero__line--gold">
+                    work
+                </span>
+
+                <span class="hero__line hero__line--gray">
+                    at the intersection of
+                </span>
+
+                <span class="hero__line hero__line--white">
+                    <span class="hero__accent">AI</span>
+                    <span class="hero__multiply">×</span>
+                    <em>real-world chaos</em>
+                </span>
+            </h1>
+
+            <p class="hero__description">
+                7+ years shipping 0-to-1 products across AI/ML, IoT, and
+                enterprise SaaS. IIT Madras.
+            </p>
+
+            <div class="hero__actions">
+                <a href="#project" class="hero__button hero__button--primary">
+                    Explore Case Studies
+                    <span aria-hidden="true">→</span>
+                </a>
+
+                <a href="#contact" class="hero__button hero__button--secondary">
+                    Work With Me
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+            <div class="home__social hero__social">
+                <a
+                    href="https://www.linkedin.com/in/shreyas-paliwal/"
+                    class="home__social-icon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                >
+                    <i class="bx bxl-linkedin"></i>
+                </a>
+
+                <a
+                    href="https://github.com/shreyaspaliwal"
+                    class="home__social-icon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                >
+                    <i class="bx bxl-github"></i>
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Hero Right / Impact Metrics -->
+        <div class="hero__metrics">
+
+            <!-- Metric 1 -->
+            <article class="metric-card metric-card--blue">
+
+                <div class="metric-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M4 19V5"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                        />
+                        <path
+                            d="M4 19H20"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                        />
+                        <rect
+                            x="7"
+                            y="12"
+                            width="2.8"
+                            height="5"
+                            rx=".5"
+                            fill="currentColor"
+                        />
+                        <rect
+                            x="11.5"
+                            y="9"
+                            width="2.8"
+                            height="8"
+                            rx=".5"
+                            fill="currentColor"
+                        />
+                        <rect
+                            x="16"
+                            y="5"
+                            width="2.8"
+                            height="12"
+                            rx=".5"
+                            fill="currentColor"
+                        />
+                    </svg>
                 </div>
-            </section>
+
+                <div class="metric-card__content">
+                    <span class="metric-card__category">SCALE</span>
+
+                    <div class="metric-card__value">
+                        80<span>→</span>92%
+                    </div>
+
+                    <p class="metric-card__description">
+                        LLM accuracy via fine-tuning on 20,000+ data points
+                        at a 3,000+ person enterprise
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- Metric 2 -->
+            <article class="metric-card metric-card--orange">
+
+                <div class="metric-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M13.2 2.8L5.7 13.1H11L10.1 21.2L18.3 10.4H13.1L13.2 2.8Z"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </div>
+
+                <div class="metric-card__content">
+                    <span class="metric-card__category">SPEED</span>
+
+                    <div class="metric-card__value">
+                        #1
+                    </div>
+
+                    <p class="metric-card__description">
+                        First in India to launch a touchless QR check-in
+                        product — 100% customer retention during COVID-19
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- Metric 3 -->
+            <article class="metric-card metric-card--green">
+
+                <div class="metric-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="8.5"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        />
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        />
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="1.4"
+                            fill="currentColor"
+                        />
+                        <path
+                            d="M12 2V4.5M12 19.5V22M2 12H4.5M19.5 12H22"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                </div>
+
+                <div class="metric-card__content">
+                    <span class="metric-card__category">IMPACT</span>
+
+                    <div class="metric-card__value">
+                        28%
+                    </div>
+
+                    <p class="metric-card__description">
+                        Computer vision accuracy improvement in ML tagging —
+                        reducing TAT by 25% within one month
+                    </p>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+</section>
 
             
             <!--Qualification-->
