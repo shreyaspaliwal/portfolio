@@ -6,7 +6,7 @@
         <title>Shreyas Paliwal | Portfolio</title>
         <link rel = "icon" href = "./Assets/Image/pp.jpg" type = "image/x-icon" class="icon">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <!--Box Icons-->
         <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
         
@@ -54,40 +54,42 @@
         </header>
 
         <main class="l-main">
-            <!--Home / Hero-->
+           <!--Home / Hero-->
 <section class="home" id="home">
     <div class="hero__container">
 
-        <!-- Hero Left -->
+        <!-- Hero Content -->
         <div class="hero__content">
 
             <div class="hero__profile">
+                <span class="hero__profile-ring"></span>
                 <img
-                    src="/images/profile.jpg"
+                    src="./images/profile.jpg"
                     alt="Shreyas Paliwal"
                     class="hero__profile-image"
                 >
             </div>
 
-            <span class="hero__eyebrow">
+            <div class="hero__eyebrow">
+                <span class="hero__eyebrow-line"></span>
                 SENIOR PRODUCT MANAGER · AI &amp; B2B SAAS
-            </span>
+            </div>
 
             <h1 class="hero__headline">
-                <span class="hero__line hero__line--white">
+                <span class="hero__headline-line hero__headline-line--strong">
                     Building products that
                 </span>
 
-                <span class="hero__line hero__line--gold">
+                <span class="hero__headline-line hero__headline-line--gold">
                     work
                 </span>
 
-                <span class="hero__line hero__line--gray">
+                <span class="hero__headline-line hero__headline-line--muted">
                     at the intersection of
                 </span>
 
-                <span class="hero__line hero__line--white">
-                    <span class="hero__accent">AI</span>
+                <span class="hero__headline-line hero__headline-line--final">
+                    <span class="hero__ai">AI</span>
                     <span class="hero__multiply">×</span>
                     <em>real-world chaos</em>
                 </span>
@@ -100,14 +102,20 @@
 
             <div class="hero__actions">
                 <a href="#project" class="hero__button hero__button--primary">
-                    Explore Case Studies
-                    <span aria-hidden="true">→</span>
+                    <span>Explore Case Studies</span>
+                    <span class="hero__button-arrow">→</span>
                 </a>
 
                 <a href="#contact" class="hero__button hero__button--secondary">
-                    Work With Me
-                    <span aria-hidden="true">→</span>
+                    <span>Work With Me</span>
+                    <span class="hero__button-arrow">→</span>
                 </a>
+            </div>
+
+            <div class="hero__meta">
+                <span>0→1 PRODUCT</span>
+                <span class="hero__meta-divider"></span>
+                <span>AI · SAAS · INTEGRATION</span>
             </div>
 
             <div class="home__social hero__social">
@@ -135,55 +143,31 @@
         </div>
 
 
-        <!-- Hero Right / Impact Metrics -->
-        <div class="hero__metrics">
+        <!-- Impact / Product Metrics -->
+        <div class="hero__impact">
 
-            <!-- Metric 1 -->
-            <article class="metric-card metric-card--blue">
-
-                <div class="metric-card__icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none">
-                        <path
-                            d="M4 19V5"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                            stroke-linecap="round"
-                        />
-                        <path
-                            d="M4 19H20"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                            stroke-linecap="round"
-                        />
-                        <rect
-                            x="7"
-                            y="12"
-                            width="2.8"
-                            height="5"
-                            rx=".5"
-                            fill="currentColor"
-                        />
-                        <rect
-                            x="11.5"
-                            y="9"
-                            width="2.8"
-                            height="8"
-                            rx=".5"
-                            fill="currentColor"
-                        />
-                        <rect
-                            x="16"
-                            y="5"
-                            width="2.8"
-                            height="12"
-                            rx=".5"
-                            fill="currentColor"
-                        />
-                    </svg>
+            <div class="hero__impact-header">
+                <div>
+                    <span class="hero__impact-label">SELECTED IMPACT</span>
+                    <h2>Products measured by outcomes.</h2>
                 </div>
 
-                <div class="metric-card__content">
-                    <span class="metric-card__category">SCALE</span>
+                <span class="hero__impact-index">01 — 03</span>
+            </div>
+
+
+            <div class="hero__metrics">
+
+                <!-- Primary Metric -->
+                <article class="metric-card metric-card--primary metric-card--blue">
+
+                    <div class="metric-card__top">
+                        <span class="metric-card__category">SCALE</span>
+
+                        <span class="metric-card__icon" aria-hidden="true">
+                            <i class="bx bx-bar-chart-alt-2"></i>
+                        </span>
+                    </div>
 
                     <div class="metric-card__value">
                         80<span>→</span>92%
@@ -193,27 +177,24 @@
                         LLM accuracy via fine-tuning on 20,000+ data points
                         at a 3,000+ person enterprise
                     </p>
-                </div>
 
-            </article>
+                    <span class="metric-card__footer">
+                        AI / ML · ENTERPRISE
+                    </span>
+
+                </article>
 
 
-            <!-- Metric 2 -->
-            <article class="metric-card metric-card--orange">
+                <!-- Secondary Metric -->
+                <article class="metric-card metric-card--orange">
 
-                <div class="metric-card__icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none">
-                        <path
-                            d="M13.2 2.8L5.7 13.1H11L10.1 21.2L18.3 10.4H13.1L13.2 2.8Z"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                            stroke-linejoin="round"
-                        />
-                    </svg>
-                </div>
+                    <div class="metric-card__top">
+                        <span class="metric-card__category">SPEED</span>
 
-                <div class="metric-card__content">
-                    <span class="metric-card__category">SPEED</span>
+                        <span class="metric-card__icon" aria-hidden="true">
+                            <i class="bx bx-bolt"></i>
+                        </span>
+                    </div>
 
                     <div class="metric-card__value">
                         #1
@@ -223,47 +204,24 @@
                         First in India to launch a touchless QR check-in
                         product — 100% customer retention during COVID-19
                     </p>
-                </div>
 
-            </article>
+                    <span class="metric-card__footer">
+                        0→1 · PRODUCT LAUNCH
+                    </span>
+
+                </article>
 
 
-            <!-- Metric 3 -->
-            <article class="metric-card metric-card--green">
+                <!-- Secondary Metric -->
+                <article class="metric-card metric-card--green">
 
-                <div class="metric-card__icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none">
-                        <circle
-                            cx="12"
-                            cy="12"
-                            r="8.5"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                        />
-                        <circle
-                            cx="12"
-                            cy="12"
-                            r="4"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                        />
-                        <circle
-                            cx="12"
-                            cy="12"
-                            r="1.4"
-                            fill="currentColor"
-                        />
-                        <path
-                            d="M12 2V4.5M12 19.5V22M2 12H4.5M19.5 12H22"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                            stroke-linecap="round"
-                        />
-                    </svg>
-                </div>
+                    <div class="metric-card__top">
+                        <span class="metric-card__category">IMPACT</span>
 
-                <div class="metric-card__content">
-                    <span class="metric-card__category">IMPACT</span>
+                        <span class="metric-card__icon" aria-hidden="true">
+                            <i class="bx bx-target-lock"></i>
+                        </span>
+                    </div>
 
                     <div class="metric-card__value">
                         28%
@@ -273,9 +231,14 @@
                         Computer vision accuracy improvement in ML tagging —
                         reducing TAT by 25% within one month
                     </p>
-                </div>
 
-            </article>
+                    <span class="metric-card__footer">
+                        COMPUTER VISION · ML
+                    </span>
+
+                </article>
+
+            </div>
 
         </div>
 
