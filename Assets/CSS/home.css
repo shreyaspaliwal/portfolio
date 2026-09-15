@@ -1,5 +1,6 @@
+```css
 /* =========================================================
-   HERO
+   HOME / HERO
    ========================================================= */
 
 .home {
@@ -7,6 +8,11 @@
     color: #F5F5F5;
     overflow: hidden;
 }
+
+
+/* =========================================================
+   HERO CONTAINER
+   ========================================================= */
 
 .hero__container {
     width: min(1200px, calc(100% - 4rem));
@@ -17,57 +23,57 @@
 
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-
     gap: 4.5rem;
+
     align-items: center;
 }
 
 
 /* =========================================================
-   HERO CONTENT
+   LEFT SIDE — HERO CONTENT
    ========================================================= */
 
 .hero__content {
-    min-width: 0;
     position: relative;
-    z-index: 2;
+    min-width: 0;
+    z-index: var(--z-tooltip);
 }
 
 
-/* =========================================================
-   PROFILE
-   ========================================================= */
+/* ---------------------------------------------------------
+   Profile image
+   --------------------------------------------------------- */
 
 .hero__profile {
+    position: relative;
+
     width: 158px;
     height: 158px;
 
-    position: relative;
-
-    margin-bottom: 1.75rem;
+    margin-bottom: 2rem;
 }
 
 .hero__profile-image {
+    position: relative;
+
     width: 150px;
     height: 150px;
 
-    display: block;
-
+    object-fit: cover;
     border-radius: 50%;
 
     border: 2px solid #C9A45C;
 
-    object-fit: cover;
-
-    position: relative;
+    display: block;
     z-index: 2;
 
     box-shadow:
-        0 0 30px rgba(201, 164, 92, 0.12);
+        0 0 0 5px rgba(201, 164, 92, .04),
+        0 0 28px rgba(201, 164, 92, .10);
 }
 
 
-/* Small offset brand ring */
+/* Subtle offset brand ring */
 
 .hero__profile-ring {
     position: absolute;
@@ -75,43 +81,44 @@
     width: 150px;
     height: 150px;
 
-    top: 7px;
-    left: 7px;
+    top: 8px;
+    left: 8px;
 
-    border: 1px solid rgba(201, 164, 92, 0.35);
-
+    border: 1px solid rgba(201, 164, 92, .35);
     border-radius: 50%;
 
     z-index: 1;
 }
 
 
-/* =========================================================
-   EYEBROW
-   ========================================================= */
+/* ---------------------------------------------------------
+   Eyebrow
+   --------------------------------------------------------- */
 
 .hero__eyebrow {
     display: flex;
     align-items: center;
-    gap: 0.65rem;
+    gap: .7rem;
 
     margin-bottom: 1.25rem;
 
     color: #C9A45C;
 
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.68rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .65rem;
     font-weight: 700;
 
-    letter-spacing: 0.13em;
+    letter-spacing: .17em;
     line-height: 1.4;
+
+    text-transform: uppercase;
 }
 
 .hero__eyebrow-line {
-    width: 24px;
-    height: 1px;
-
     display: inline-block;
+
+    width: 30px;
+    height: 1px;
 
     background-color: #C9A45C;
 
@@ -120,46 +127,54 @@
 
 
 /* =========================================================
-   HERO TYPOGRAPHY
+   HERO HEADLINE
    ========================================================= */
 
 .hero__headline {
     margin: 0;
 
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
     font-size: clamp(3.1rem, 4.5vw, 4.35rem);
     font-weight: 600;
 
+    letter-spacing: -.045em;
     line-height: 1.02;
-    letter-spacing: -0.045em;
-
-    max-width: 760px;
 }
 
 .hero__headline-line {
     display: block;
 }
 
+
+/* Building products that */
+
 .hero__headline-line--strong {
-    color: #FFFFFF;
+    color: #F5F5F5;
     font-weight: 700;
 }
+
+
+/* work */
 
 .hero__headline-line--gold {
     color: #C9A45C;
     font-weight: 800;
-
-    letter-spacing: -0.055em;
 }
 
+
+/* at the intersection of */
+
 .hero__headline-line--muted {
-    color: #B8B8B8;
+    color: #A5A5A5;
     font-weight: 500;
 }
 
+
+/* AI × real-world chaos */
+
 .hero__headline-line--final {
-    color: #FFFFFF;
+    color: #F5F5F5;
     font-weight: 600;
 }
 
@@ -169,23 +184,22 @@
 }
 
 .hero__multiply {
-    color: #FFFFFF;
+    color: #777;
     font-weight: 500;
-
-    padding: 0 0.08em;
+    margin: 0 .08em;
 }
 
-.hero__headline em {
-    color: #FFFFFF;
+.hero__headline-line--final em {
+    color: #E5E5E5;
 
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: italic;
     font-weight: 600;
 }
 
 
 /* =========================================================
-   DESCRIPTION
+   HERO DESCRIPTION
    ========================================================= */
 
 .hero__description {
@@ -193,18 +207,18 @@
 
     margin: 1.75rem 0 0;
 
-    color: #B8B8B8;
+    color: #969696;
 
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.95rem;
-    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .95rem;
+    font-weight: 500;
 
     line-height: 1.7;
 }
 
 
 /* =========================================================
-   CTA BUTTONS
+   HERO ACTIONS
    ========================================================= */
 
 .hero__actions {
@@ -212,49 +226,40 @@
     align-items: center;
     flex-wrap: wrap;
 
-    gap: 0.8rem;
+    gap: .8rem;
 
-    margin-top: 1.8rem;
+    margin-top: 2rem;
 }
+
+
+/* ---------------------------------------------------------
+   Hero buttons
+   --------------------------------------------------------- */
 
 .hero__button {
     min-height: 52px;
 
-    padding: 0 1.35rem;
+    padding: 0 1.25rem;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.65rem;
+    gap: .65rem;
 
     border-radius: 6px;
 
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.76rem;
-    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
 
+    letter-spacing: .02em;
     text-decoration: none;
 
     transition:
-        background-color 250ms ease,
-        border-color 250ms ease,
-        color 250ms ease,
-        transform 250ms ease,
-        box-shadow 250ms ease;
-}
-
-.hero__button-arrow {
-    font-size: 1rem;
-
-    transition: transform 250ms ease;
-}
-
-.hero__button:hover {
-    transform: translateY(-2px);
-}
-
-.hero__button:hover .hero__button-arrow {
-    transform: translateX(3px);
+        background-color .25s ease,
+        border-color .25s ease,
+        color .25s ease,
+        transform .25s ease;
 }
 
 
@@ -262,21 +267,16 @@
 
 .hero__button--primary {
     background-color: #C9A45C;
-
     border: 1px solid #C9A45C;
 
-    color: #000000;
-
-    box-shadow:
-        0 8px 22px rgba(201, 164, 92, 0.08);
+    color: #000;
 }
 
 .hero__button--primary:hover {
-    background-color: #D5B572;
-    border-color: #D5B572;
+    background-color: #D5B574;
+    border-color: #D5B574;
 
-    box-shadow:
-        0 10px 28px rgba(201, 164, 92, 0.13);
+    transform: translateY(-2px);
 }
 
 
@@ -284,15 +284,29 @@
 
 .hero__button--secondary {
     background-color: transparent;
+    border: 1px solid rgba(201, 164, 92, .65);
 
-    border: 1px solid rgba(201, 164, 92, 0.65);
-
-    color: #FFFFFF;
+    color: #C9A45C;
 }
 
 .hero__button--secondary:hover {
-    background-color: rgba(201, 164, 92, 0.08);
+    background-color: rgba(201, 164, 92, .07);
     border-color: #C9A45C;
+
+    transform: translateY(-2px);
+}
+
+
+/* Button arrows */
+
+.hero__button-arrow {
+    font-size: .95rem;
+
+    transition: transform .25s ease;
+}
+
+.hero__button:hover .hero__button-arrow {
+    transform: translateX(3px);
 }
 
 
@@ -303,24 +317,28 @@
 .hero__meta {
     display: flex;
     align-items: center;
-    gap: 0.65rem;
+    flex-wrap: wrap;
+    gap: .75rem;
 
-    margin-top: 1.6rem;
+    margin-top: 2rem;
 
-    color: #666666;
+    color: #5F5F5F;
 
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.58rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .56rem;
     font-weight: 600;
 
-    letter-spacing: 0.12em;
+    letter-spacing: .14em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
 }
 
 .hero__meta-divider {
-    width: 18px;
+    width: 22px;
     height: 1px;
 
-    background-color: #444444;
+    background-color: #393939;
 }
 
 
@@ -330,522 +348,55 @@
 
 .hero__social {
     display: flex;
-    flex-direction: row;
-    gap: 0.9rem;
+    align-items: center;
+    gap: .85rem;
 
-    margin-top: 1.5rem;
+    margin-top: 1.4rem;
 }
 
 .hero__social .home__social-icon {
+    width: 32px;
+    height: 32px;
+
     margin-bottom: 0;
-
-    color: #666666;
-
-    font-size: 1.2rem;
-
-    transition:
-        color 200ms ease,
-        transform 200ms ease;
-}
-
-.hero__social .home__social-icon:hover {
-    color: #C9A45C;
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   IMPACT SECTION
-   ========================================================= */
-
-.hero__impact {
-    min-width: 0;
-}
-
-.hero__impact-header {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-
-    margin-bottom: 1.25rem;
-
-    padding: 0 0.15rem;
-}
-
-.hero__impact-label {
-    display: block;
-
-    margin-bottom: 0.45rem;
-
-    color: #C9A45C;
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.6rem;
-    font-weight: 700;
-
-    letter-spacing: 0.16em;
-}
-
-.hero__impact-header h2 {
-    margin: 0;
-
-    color: #FFFFFF;
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-
-    letter-spacing: -0.02em;
-}
-
-.hero__impact-index {
-    color: #555555;
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.58rem;
-    font-weight: 600;
-
-    letter-spacing: 0.1em;
-
-    white-space: nowrap;
-}
-
-
-/* =========================================================
-   METRICS GRID
-   ========================================================= */
-
-.hero__metrics {
-    display: grid;
-
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 0.85rem;
-}
-
-
-/* =========================================================
-   METRIC CARDS
-   ========================================================= */
-
-.metric-card {
-    min-width: 0;
-
-    position: relative;
-
-    padding: 1.5rem;
-
-    background-color: #0A0A0A;
-
-    border: 1px solid rgba(255, 255, 255, 0.12);
-
-    border-radius: 8px;
-
-    overflow: hidden;
-
-    transition:
-        background-color 250ms ease,
-        border-color 250ms ease,
-        transform 250ms ease;
-}
-
-.metric-card:hover {
-    background-color: #111111;
-
-    border-color: rgba(255, 255, 255, 0.19);
-
-    transform: translateY(-2px);
-}
-
-
-/* Primary card spans both columns */
-
-.metric-card--primary {
-    grid-column: 1 / -1;
-
-    min-height: 235px;
-}
-
-
-/* Colored top accent */
-
-.metric-card::before {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 100%;
-    height: 2px;
-
-    background-color: var(--metric-color);
-}
-
-
-/* Metric color variables */
-
-.metric-card--blue {
-    --metric-color: #3B82F6;
-}
-
-.metric-card--orange {
-    --metric-color: #F59E0B;
-}
-
-.metric-card--green {
-    --metric-color: #22C55E;
-}
-
-
-/* =========================================================
-   METRIC TOP
-   ========================================================= */
-
-.metric-card__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    margin-bottom: 1.1rem;
-}
-
-.metric-card__category {
-    color: var(--metric-color);
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.6rem;
-    font-weight: 700;
-
-    letter-spacing: 0.15em;
-}
-
-.metric-card__icon {
-    width: 34px;
-    height: 34px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    color: var(--metric-color);
+    border: 1px solid rgba(255, 255, 255, .10);
+    border-radius: 50%;
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
-
-    border-radius: 6px;
+    color: #888;
 
     font-size: 1rem;
+
+    transition:
+        color .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.hero__social .home__social-icon:hover {
+    color: #C9A45C;
+
+    border-color: rgba(201, 164, 92, .45);
+
+    transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   METRIC VALUE
+   RIGHT SIDE — FEATURED PROJECTS
    ========================================================= */
 
-.metric-card__value {
-    margin-bottom: 0.75rem;
-
-    color: #FFFFFF;
-
-    font-family: "Montserrat", sans-serif;
-    font-size: clamp(2.25rem, 4vw, 3.25rem);
-    font-weight: 700;
-
-    line-height: 0.95;
-    letter-spacing: -0.055em;
-}
-
-.metric-card__value span {
-    color: var(--metric-color);
-
-    padding: 0 0.04em;
+.hero__impact {
+    width: 100%;
+    min-width: 0;
 }
 
 
-/* =========================================================
-   METRIC DESCRIPTION
-   ========================================================= */
-
-.metric-card__description {
-    margin: 0;
-
-    color: #969696;
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.7rem;
-    font-weight: 400;
-
-    line-height: 1.6;
-}
-
-
-/* =========================================================
-   METRIC FOOTER
-   ========================================================= */
-
-.metric-card__footer {
-    display: block;
-
-    margin-top: 1.2rem;
-
-    color: #505050;
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.52rem;
-    font-weight: 600;
-
-    letter-spacing: 0.12em;
-}
-
-
-/* =========================================================
-   RESPONSIVE — <= 1200px
-   ========================================================= */
-
-@media screen and (max-width: 1200px) {
-
-    .hero__container {
-        width: min(1050px, calc(100% - 4rem));
-
-        gap: 3rem;
-    }
-
-    .hero__headline {
-        font-size: clamp(2.9rem, 4.6vw, 3.8rem);
-    }
-
-    .metric-card {
-        padding: 1.35rem;
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE — <= 1000px
-   ========================================================= */
-
-@media screen and (max-width: 1000px) {
-
-    .hero__container {
-        width: min(760px, calc(100% - 4rem));
-
-        grid-template-columns: 1fr;
-
-        gap: 3.5rem;
-
-        padding-top: 4rem;
-        padding-bottom: 5rem;
-    }
-
-    .hero__headline {
-        max-width: 760px;
-
-        font-size: clamp(3rem, 7vw, 4rem);
-    }
-
-    .hero__impact {
-        width: 100%;
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE — <= 768px
-   ========================================================= */
-
-@media screen and (max-width: 768px) {
-
-    .hero__container {
-        width: calc(100% - 3rem);
-
-        gap: 3rem;
-
-        padding-top: 3.25rem;
-        padding-bottom: 4rem;
-    }
-
-    .hero__profile {
-        width: 125px;
-        height: 125px;
-    }
-
-    .hero__profile-image,
-    .hero__profile-ring {
-        width: 118px;
-        height: 118px;
-    }
-
-    .hero__profile-ring {
-        top: 6px;
-        left: 6px;
-    }
-
-    .hero__headline {
-        font-size: clamp(2.65rem, 7.8vw, 3.35rem);
-
-        line-height: 1.03;
-    }
-
-    .hero__description {
-        font-size: 0.9rem;
-    }
-
-    .hero__metrics {
-        grid-template-columns: 1fr;
-    }
-
-    .metric-card--primary {
-        grid-column: auto;
-    }
-
-    .metric-card--primary {
-        min-height: auto;
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE — <= 480px
-   ========================================================= */
-
-@media screen and (max-width: 480px) {
-
-    .hero__container {
-        width: calc(100% - 2rem);
-
-        gap: 2.5rem;
-
-        padding-top: 2.5rem;
-        padding-bottom: 3rem;
-    }
-
-    .hero__profile {
-        width: 116px;
-        height: 116px;
-
-        margin-bottom: 1.4rem;
-    }
-
-    .hero__profile-image,
-    .hero__profile-ring {
-        width: 108px;
-        height: 108px;
-    }
-
-    .hero__profile-ring {
-        top: 6px;
-        left: 6px;
-    }
-
-    .hero__eyebrow {
-        font-size: 0.57rem;
-
-        letter-spacing: 0.09em;
-    }
-
-    .hero__eyebrow-line {
-        width: 18px;
-    }
-
-    .hero__headline {
-        font-size: clamp(2.25rem, 10.5vw, 2.65rem);
-
-        line-height: 1.04;
-        letter-spacing: -0.04em;
-    }
-
-    .hero__description {
-        margin-top: 1.4rem;
-
-        font-size: 0.82rem;
-        line-height: 1.65;
-    }
-
-    .hero__actions {
-        width: 100%;
-
-        flex-direction: column;
-        align-items: stretch;
-
-        margin-top: 1.5rem;
-    }
-
-    .hero__button {
-        width: 100%;
-
-        min-height: 52px;
-    }
-
-    .hero__meta {
-        flex-wrap: wrap;
-
-        line-height: 1.7;
-    }
-
-    .hero__impact-header {
-        align-items: flex-start;
-    }
-
-    .hero__impact-index {
-        display: none;
-    }
-
-    .hero__impact-header h2 {
-        font-size: 0.9rem;
-    }
-
-    .hero__metrics {
-        gap: 0.7rem;
-    }
-
-    .metric-card {
-        padding: 1.25rem;
-    }
-
-    .metric-card__value {
-        font-size: 2.35rem;
-    }
-
-    .metric-card__description {
-        font-size: 0.67rem;
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE — <= 390px
-   ========================================================= */
-
-@media screen and (max-width: 390px) {
-
-    .hero__container {
-        width: calc(100% - 1.5rem);
-    }
-
-    .hero__headline {
-        font-size: 2.15rem;
-    }
-
-    .hero__eyebrow {
-        font-size: 0.52rem;
-    }
-
-    .hero__description {
-        font-size: 0.78rem;
-    }
-
-    .metric-card {
-        padding: 1.1rem;
-    }
-
-    .metric-card__value {
-        font-size: 2.1rem;
-    }
-
-}
+/* ---------------------------------------------------------
+   Section heading
+   --------------------------------------
+```
