@@ -4,27 +4,27 @@
 
 .home {
     background-color: #000;
-    overflow: hidden;
     color: #F5F5F5;
+    overflow: hidden;
 }
 
 .hero__container {
-    width: min(1440px, calc(100% - 8rem));
+    width: min(1200px, calc(100% - 4rem));
     min-height: calc(100vh - var(--header-height));
 
     margin: 0 auto;
-    padding: 5.5rem 0 5rem;
+    padding: 5rem 0;
 
     display: grid;
-    grid-template-columns: minmax(0, 48fr) minmax(0, 52fr);
-    gap: 5rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 
+    gap: 4.5rem;
     align-items: center;
 }
 
 
 /* =========================================================
-   HERO LEFT CONTENT
+   HERO CONTENT
    ========================================================= */
 
 .hero__content {
@@ -39,43 +39,83 @@
    ========================================================= */
 
 .hero__profile {
+    width: 158px;
+    height: 158px;
+
+    position: relative;
+
     margin-bottom: 1.75rem;
 }
 
 .hero__profile-image {
+    width: 150px;
+    height: 150px;
+
     display: block;
 
-    width: 158px;
-    height: 158px;
-
     border-radius: 50%;
-    border: 4px solid #C9A45C;
+
+    border: 2px solid #C9A45C;
 
     object-fit: cover;
 
+    position: relative;
+    z-index: 2;
+
     box-shadow:
-        0 10px 35px rgba(0, 0, 0, 0.55),
-        0 0 0 1px rgba(201, 164, 92, 0.12);
+        0 0 30px rgba(201, 164, 92, 0.12);
+}
+
+
+/* Small offset brand ring */
+
+.hero__profile-ring {
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    top: 7px;
+    left: 7px;
+
+    border: 1px solid rgba(201, 164, 92, 0.35);
+
+    border-radius: 50%;
+
+    z-index: 1;
 }
 
 
 /* =========================================================
-   HERO EYEBROW
+   EYEBROW
    ========================================================= */
 
 .hero__eyebrow {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
 
     margin-bottom: 1.25rem;
 
     color: #C9A45C;
 
     font-family: "Montserrat", sans-serif;
-    font-size: 0.72rem;
-    font-weight: 600;
+    font-size: 0.68rem;
+    font-weight: 700;
 
-    letter-spacing: 0.18em;
+    letter-spacing: 0.13em;
     line-height: 1.4;
+}
+
+.hero__eyebrow-line {
+    width: 24px;
+    height: 1px;
+
+    display: inline-block;
+
+    background-color: #C9A45C;
+
+    flex-shrink: 0;
 }
 
 
@@ -86,46 +126,61 @@
 .hero__headline {
     margin: 0;
 
-    font-family: "DM Serif Display", Georgia, serif;
+    font-family: "Montserrat", sans-serif;
 
-    font-size: clamp(3.75rem, 5.25vw, 4.5rem);
-    font-weight: 400;
+    font-size: clamp(3.1rem, 4.5vw, 4.35rem);
+    font-weight: 600;
 
-    line-height: 0.98;
-    letter-spacing: -0.035em;
+    line-height: 1.02;
+    letter-spacing: -0.045em;
 
-    max-width: 850px;
+    max-width: 760px;
 }
 
-.hero__line {
+.hero__headline-line {
     display: block;
 }
 
-.hero__line--white {
-    color: #F5F5F5;
+.hero__headline-line--strong {
+    color: #FFFFFF;
+    font-weight: 700;
 }
 
-.hero__line--gold {
+.hero__headline-line--gold {
     color: #C9A45C;
+    font-weight: 800;
+
+    letter-spacing: -0.055em;
 }
 
-.hero__line--gray {
+.hero__headline-line--muted {
     color: #B8B8B8;
+    font-weight: 500;
 }
 
-.hero__accent {
+.hero__headline-line--final {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.hero__ai {
     color: #C9A45C;
+    font-weight: 800;
 }
 
 .hero__multiply {
-    color: #F5F5F5;
-    margin: 0 0.08em;
+    color: #FFFFFF;
+    font-weight: 500;
+
+    padding: 0 0.08em;
 }
 
 .hero__headline em {
-    color: #F5F5F5;
+    color: #FFFFFF;
+
+    font-family: "Montserrat", sans-serif;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 
@@ -136,15 +191,15 @@
 .hero__description {
     max-width: 550px;
 
-    margin: 2rem 0 0;
+    margin: 1.75rem 0 0;
 
-    color: #D0D0D0;
+    color: #B8B8B8;
 
     font-family: "Montserrat", sans-serif;
-    font-size: 1.08rem;
+    font-size: 0.95rem;
     font-weight: 400;
 
-    line-height: 1.65;
+    line-height: 1.7;
 }
 
 
@@ -156,25 +211,26 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.9rem;
 
-    margin-top: 2rem;
+    gap: 0.8rem;
+
+    margin-top: 1.8rem;
 }
 
 .hero__button {
-    min-height: 60px;
+    min-height: 52px;
 
-    padding: 0 1.5rem;
+    padding: 0 1.35rem;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.65rem;
 
-    border-radius: 11px;
+    border-radius: 6px;
 
     font-family: "Montserrat", sans-serif;
-    font-size: 0.84rem;
+    font-size: 0.76rem;
     font-weight: 600;
 
     text-decoration: none;
@@ -187,8 +243,9 @@
         box-shadow 250ms ease;
 }
 
-.hero__button span {
-    font-size: 1.1rem;
+.hero__button-arrow {
+    font-size: 1rem;
+
     transition: transform 250ms ease;
 }
 
@@ -196,43 +253,74 @@
     transform: translateY(-2px);
 }
 
-.hero__button:hover span {
+.hero__button:hover .hero__button-arrow {
     transform: translateX(3px);
 }
 
 
-/* Primary CTA */
+/* Primary */
 
 .hero__button--primary {
-    background: #17130D;
-    border: 1px solid rgba(201, 164, 92, 0.55);
+    background-color: #C9A45C;
 
-    color: #F5F5F5;
+    border: 1px solid #C9A45C;
+
+    color: #000000;
 
     box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.35);
+        0 8px 22px rgba(201, 164, 92, 0.08);
 }
 
 .hero__button--primary:hover {
-    background: #241D13;
-    border-color: #C9A45C;
+    background-color: #D5B572;
+    border-color: #D5B572;
 
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.45);
+        0 10px 28px rgba(201, 164, 92, 0.13);
 }
 
 
-/* Secondary CTA */
+/* Secondary */
 
 .hero__button--secondary {
-    background: transparent;
-    border: 1px solid #C9A45C;
+    background-color: transparent;
 
-    color: #F5F5F5;
+    border: 1px solid rgba(201, 164, 92, 0.65);
+
+    color: #FFFFFF;
 }
 
 .hero__button--secondary:hover {
-    background: rgba(201, 164, 92, 0.12);
+    background-color: rgba(201, 164, 92, 0.08);
+    border-color: #C9A45C;
+}
+
+
+/* =========================================================
+   PERSONAL BRAND META
+   ========================================================= */
+
+.hero__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+
+    margin-top: 1.6rem;
+
+    color: #666666;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.58rem;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+}
+
+.hero__meta-divider {
+    width: 18px;
+    height: 1px;
+
+    background-color: #444444;
 }
 
 
@@ -241,17 +329,19 @@
    ========================================================= */
 
 .hero__social {
+    display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 0.9rem;
 
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .hero__social .home__social-icon {
     margin-bottom: 0;
 
-    color: #888;
-    font-size: 1.25rem;
+    color: #666666;
+
+    font-size: 1.2rem;
 
     transition:
         color 200ms ease,
@@ -260,75 +350,142 @@
 
 .hero__social .home__social-icon:hover {
     color: #C9A45C;
+
     transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   IMPACT METRICS
+   IMPACT SECTION
+   ========================================================= */
+
+.hero__impact {
+    min-width: 0;
+}
+
+.hero__impact-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 1.25rem;
+
+    padding: 0 0.15rem;
+}
+
+.hero__impact-label {
+    display: block;
+
+    margin-bottom: 0.45rem;
+
+    color: #C9A45C;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+}
+
+.hero__impact-header h2 {
+    margin: 0;
+
+    color: #FFFFFF;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+
+    letter-spacing: -0.02em;
+}
+
+.hero__impact-index {
+    color: #555555;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.58rem;
+    font-weight: 600;
+
+    letter-spacing: 0.1em;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   METRICS GRID
    ========================================================= */
 
 .hero__metrics {
-    width: 100%;
+    display: grid;
 
-    background: #090909;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
-    overflow: hidden;
-
-    box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.35);
+    gap: 0.85rem;
 }
 
 
-/* Individual metric row */
+/* =========================================================
+   METRIC CARDS
+   ========================================================= */
 
 .metric-card {
-    min-height: 190px;
-
-    display: grid;
-    grid-template-columns: 72px minmax(0, 1fr);
-    gap: 1.5rem;
-
-    padding: 2rem 2.25rem;
+    min-width: 0;
 
     position: relative;
 
-    background: #090909;
+    padding: 1.5rem;
+
+    background-color: #0A0A0A;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 8px;
+
+    overflow: hidden;
 
     transition:
-        background-color 250ms ease;
-}
-
-.metric-card + .metric-card {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+        background-color 250ms ease,
+        border-color 250ms ease,
+        transform 250ms ease;
 }
 
 .metric-card:hover {
-    background: #101010;
+    background-color: #111111;
+
+    border-color: rgba(255, 255, 255, 0.19);
+
+    transform: translateY(-2px);
 }
 
 
-/* Accent line */
+/* Primary card spans both columns */
+
+.metric-card--primary {
+    grid-column: 1 / -1;
+
+    min-height: 235px;
+}
+
+
+/* Colored top accent */
 
 .metric-card::before {
     content: "";
 
     position: absolute;
+
     left: 0;
     top: 0;
-    bottom: 0;
 
-    width: 3px;
+    width: 100%;
+    height: 2px;
 
-    opacity: 0.95;
+    background-color: var(--metric-color);
 }
 
 
-/* =========================================================
-   METRIC COLORS
-   ========================================================= */
+/* Metric color variables */
 
 .metric-card--blue {
     --metric-color: #3B82F6;
@@ -342,18 +499,32 @@
     --metric-color: #22C55E;
 }
 
-.metric-card::before {
-    background: var(--metric-color);
-}
-
 
 /* =========================================================
-   METRIC ICON
+   METRIC TOP
    ========================================================= */
 
+.metric-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 1.1rem;
+}
+
+.metric-card__category {
+    color: var(--metric-color);
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
 .metric-card__icon {
-    width: 52px;
-    height: 52px;
+    width: 34px;
+    height: 34px;
 
     display: flex;
     align-items: center;
@@ -361,81 +532,71 @@
 
     color: var(--metric-color);
 
-    border: 1px solid color-mix(
-        in srgb,
-        var(--metric-color) 35%,
-        transparent
-    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
-    background: color-mix(
-        in srgb,
-        var(--metric-color) 7%,
-        transparent
-    );
+    border-radius: 6px;
 
-    border-radius: 10px;
-
-    margin-top: 0.1rem;
-}
-
-.metric-card__icon svg {
-    width: 26px;
-    height: 26px;
+    font-size: 1rem;
 }
 
 
 /* =========================================================
-   METRIC CONTENT
+   METRIC VALUE
    ========================================================= */
 
-.metric-card__content {
-    min-width: 0;
-}
+.metric-card__value {
+    margin-bottom: 0.75rem;
 
-.metric-card__category {
-    display: block;
-
-    margin-bottom: 0.3rem;
-
-    color: var(--metric-color);
+    color: #FFFFFF;
 
     font-family: "Montserrat", sans-serif;
-    font-size: 0.66rem;
+    font-size: clamp(2.25rem, 4vw, 3.25rem);
     font-weight: 700;
 
-    letter-spacing: 0.18em;
-}
-
-.metric-card__value {
-    margin: 0 0 0.65rem;
-
-    color: #F5F5F5;
-
-    font-family: "DM Serif Display", Georgia, serif;
-    font-size: clamp(2.5rem, 3.2vw, 3.35rem);
-    font-weight: 400;
-
     line-height: 0.95;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.055em;
 }
 
 .metric-card__value span {
     color: var(--metric-color);
-    margin: 0 0.04em;
+
+    padding: 0 0.04em;
 }
 
-.metric-card__description {
-    max-width: 540px;
 
+/* =========================================================
+   METRIC DESCRIPTION
+   ========================================================= */
+
+.metric-card__description {
     margin: 0;
 
-    color: #AFAFAF;
+    color: #969696;
 
     font-family: "Montserrat", sans-serif;
-    font-size: 0.79rem;
+    font-size: 0.7rem;
     font-weight: 400;
 
     line-height: 1.6;
+}
+
+
+/* =========================================================
+   METRIC FOOTER
+   ========================================================= */
+
+.metric-card__footer {
+    display: block;
+
+    margin-top: 1.2rem;
+
+    color: #505050;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.52rem;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
 }
 
 
@@ -446,18 +607,17 @@
 @media screen and (max-width: 1200px) {
 
     .hero__container {
-        width: min(1200px, calc(100% - 5rem));
+        width: min(1050px, calc(100% - 4rem));
+
         gap: 3rem;
     }
 
     .hero__headline {
-        font-size: clamp(3.4rem, 5vw, 4rem);
+        font-size: clamp(2.9rem, 4.6vw, 3.8rem);
     }
 
     .metric-card {
-        padding: 1.75rem 1.75rem;
-        grid-template-columns: 60px minmax(0, 1fr);
-        gap: 1.2rem;
+        padding: 1.35rem;
     }
 
 }
@@ -474,18 +634,19 @@
 
         grid-template-columns: 1fr;
 
-        gap: 4rem;
+        gap: 3.5rem;
 
-        padding-top: 4.5rem;
+        padding-top: 4rem;
         padding-bottom: 5rem;
     }
 
     .hero__headline {
-        max-width: 800px;
-        font-size: clamp(3.5rem, 7vw, 4.5rem);
+        max-width: 760px;
+
+        font-size: clamp(3rem, 7vw, 4rem);
     }
 
-    .hero__metrics {
+    .hero__impact {
         width: 100%;
     }
 
@@ -503,68 +664,46 @@
 
         gap: 3rem;
 
-        padding-top: 3.5rem;
+        padding-top: 3.25rem;
         padding-bottom: 4rem;
     }
 
-    .hero__profile-image {
-        width: 120px;
-        height: 120px;
-    }
-
     .hero__profile {
-        margin-bottom: 1.5rem;
+        width: 125px;
+        height: 125px;
     }
 
-    .hero__eyebrow {
-        font-size: 0.65rem;
-        letter-spacing: 0.14em;
+    .hero__profile-image,
+    .hero__profile-ring {
+        width: 118px;
+        height: 118px;
+    }
+
+    .hero__profile-ring {
+        top: 6px;
+        left: 6px;
     }
 
     .hero__headline {
-        font-size: clamp(2.75rem, 8vw, 3.2rem);
-        line-height: 1;
+        font-size: clamp(2.65rem, 7.8vw, 3.35rem);
+
+        line-height: 1.03;
     }
 
     .hero__description {
-        margin-top: 1.5rem;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
-    .hero__actions {
-        margin-top: 1.5rem;
+    .hero__metrics {
+        grid-template-columns: 1fr;
     }
 
-    .hero__button {
-        min-height: 56px;
+    .metric-card--primary {
+        grid-column: auto;
     }
 
-    .metric-card {
-        min-height: 175px;
-
-        padding: 1.5rem;
-
-        grid-template-columns: 54px minmax(0, 1fr);
-        gap: 1rem;
-    }
-
-    .metric-card__icon {
-        width: 46px;
-        height: 46px;
-    }
-
-    .metric-card__icon svg {
-        width: 23px;
-        height: 23px;
-    }
-
-    .metric-card__value {
-        font-size: 2.5rem;
-    }
-
-    .metric-card__description {
-        font-size: 0.74rem;
-        line-height: 1.55;
+    .metric-card--primary {
+        min-height: auto;
     }
 
 }
@@ -581,89 +720,109 @@
 
         gap: 2.5rem;
 
-        padding-top: 2.75rem;
-        padding-bottom: 3.5rem;
+        padding-top: 2.5rem;
+        padding-bottom: 3rem;
     }
 
-    .hero__profile-image {
-        width: 112px;
-        height: 112px;
+    .hero__profile {
+        width: 116px;
+        height: 116px;
+
+        margin-bottom: 1.4rem;
+    }
+
+    .hero__profile-image,
+    .hero__profile-ring {
+        width: 108px;
+        height: 108px;
+    }
+
+    .hero__profile-ring {
+        top: 6px;
+        left: 6px;
     }
 
     .hero__eyebrow {
-        margin-bottom: 1rem;
+        font-size: 0.57rem;
 
-        font-size: 0.58rem;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.09em;
+    }
+
+    .hero__eyebrow-line {
+        width: 18px;
     }
 
     .hero__headline {
-        font-size: clamp(2.35rem, 10vw, 2.65rem);
-        line-height: 1.02;
+        font-size: clamp(2.25rem, 10.5vw, 2.65rem);
+
+        line-height: 1.04;
+        letter-spacing: -0.04em;
     }
 
     .hero__description {
-        font-size: 0.88rem;
-        line-height: 1.6;
+        margin-top: 1.4rem;
+
+        font-size: 0.82rem;
+        line-height: 1.65;
     }
 
     .hero__actions {
         width: 100%;
+
         flex-direction: column;
         align-items: stretch;
+
+        margin-top: 1.5rem;
     }
 
     .hero__button {
         width: 100%;
-        min-height: 54px;
+
+        min-height: 52px;
+    }
+
+    .hero__meta {
+        flex-wrap: wrap;
+
+        line-height: 1.7;
+    }
+
+    .hero__impact-header {
+        align-items: flex-start;
+    }
+
+    .hero__impact-index {
+        display: none;
+    }
+
+    .hero__impact-header h2 {
+        font-size: 0.9rem;
+    }
+
+    .hero__metrics {
+        gap: 0.7rem;
     }
 
     .metric-card {
-        min-height: auto;
-
-        padding: 1.35rem 1.25rem;
-
-        grid-template-columns: 44px minmax(0, 1fr);
-        gap: 0.85rem;
-    }
-
-    .metric-card__icon {
-        width: 40px;
-        height: 40px;
-
-        border-radius: 8px;
-    }
-
-    .metric-card__icon svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .metric-card__category {
-        font-size: 0.58rem;
+        padding: 1.25rem;
     }
 
     .metric-card__value {
-        margin-bottom: 0.55rem;
-        font-size: 2.15rem;
+        font-size: 2.35rem;
     }
 
     .metric-card__description {
-        font-size: 0.7rem;
-    }
-
-    .hero__social {
-        margin-top: 1.5rem;
+        font-size: 0.67rem;
     }
 
 }
 
 
 /* =========================================================
-   VERY SMALL DEVICES
+   RESPONSIVE — <= 390px
    ========================================================= */
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 390px) {
 
     .hero__container {
         width: calc(100% - 1.5rem);
@@ -673,18 +832,20 @@
         font-size: 2.15rem;
     }
 
-    .metric-card {
-        grid-template-columns: 38px minmax(0, 1fr);
-        padding: 1.15rem 1rem;
+    .hero__eyebrow {
+        font-size: 0.52rem;
     }
 
-    .metric-card__icon {
-        width: 36px;
-        height: 36px;
+    .hero__description {
+        font-size: 0.78rem;
+    }
+
+    .metric-card {
+        padding: 1.1rem;
     }
 
     .metric-card__value {
-        font-size: 1.95rem;
+        font-size: 2.1rem;
     }
 
 }
