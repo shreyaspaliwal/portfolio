@@ -21,11 +21,11 @@
     .home__img img{
         width: 750px;
         height: 370px;
-    }   
+    }
 }
 
 
-@media screen and (min-width: 200px){   
+@media screen and (min-width: 200px){
     .home__profession{
         font-size: 1.20rem;
     }
@@ -35,7 +35,7 @@
     .home__img img{
         width: 750px;
         height: 430px;
-    }   
+    }
     .home__profession{
         font-size: 1.50rem;
     }
@@ -74,7 +74,7 @@
         margin-left: var(--mb-5);
         margin-bottom: 0;
     }
-    
+
     .nav__toggle{
         display: none;
     }
