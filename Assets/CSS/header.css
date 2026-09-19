@@ -58,7 +58,7 @@
 }
 
 .nav__link:hover{
-    color: var(--first-color-light);
+    color: #C9A45C;
 }
 
 .nav__logo, .nav__toggle{
@@ -87,7 +87,7 @@
     left: 0;
     width: 65%;
     height: 3px;
-    background-color: var(--first-color-light);
+    background-color: #C9A45C;
 }
 
 /*--Change Background Header--*/
