@@ -108,7 +108,7 @@ img{
 
 .section-title{
     font-size: var(--h1-font-size);
-    color: var(--first-color);
+    color: #FFFFFF;
     margin-bottom: var(--mb-3);
 }
 
@@ -116,4 +116,8 @@ img{
     display: block;
     font-size: var(--smaller-font-size);
     font-weight: var(--font-semi-bold);
+    color: #C9A45C;
+    margin-bottom: .65rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
 }
