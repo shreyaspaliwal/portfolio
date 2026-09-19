@@ -67,8 +67,8 @@
     z-index: 2;
 
     box-shadow:
-        0 0 0 5px rgba(201, 164, 92, .04),
-        0 0 28px rgba(201, 164, 92, .10);
+            0 0 0 5px rgba(201, 164, 92, .04),
+            0 0 28px rgba(201, 164, 92, .10);
 }
 
 
@@ -255,10 +255,10 @@
     text-decoration: none;
 
     transition:
-        background-color .25s ease,
-        border-color .25s ease,
-        color .25s ease,
-        transform .25s ease;
+            background-color .25s ease,
+            border-color .25s ease,
+            color .25s ease,
+            transform .25s ease;
 }
 
 
@@ -371,9 +371,9 @@
     font-size: 1rem;
 
     transition:
-        color .25s ease,
-        border-color .25s ease,
-        transform .25s ease;
+            color .25s ease,
+            border-color .25s ease,
+            transform .25s ease;
 }
 
 .hero__social .home__social-icon:hover {
@@ -474,9 +474,9 @@
     text-decoration: none;
 
     transition:
-        transform .25s ease,
-        border-color .25s ease,
-        background-color .25s ease;
+            transform .25s ease,
+            border-color .25s ease,
+            background-color .25s ease;
 }
 
 
@@ -500,8 +500,8 @@
     opacity: .7;
 
     transition:
-        width .25s ease,
-        opacity .25s ease;
+            width .25s ease,
+            opacity .25s ease;
 }
 
 
@@ -755,7 +755,7 @@
 /* =========================================================
    LEGACY HOME SOCIAL / BUTTON SUPPORT
    =========================================================
-   
+
    These classes are retained from the original home.css
    to minimize impact on any existing markup elsewhere.
    ========================================================= */
@@ -1069,4 +1069,3 @@
         font-size: .52rem;
     }
 }
-```
