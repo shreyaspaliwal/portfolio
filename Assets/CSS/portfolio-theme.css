@@ -1,0 +1,105 @@
+:root {
+    --portfolio-bg: #000000;
+    --portfolio-surface: #0A0A0A;
+    --portfolio-surface-hover: #0D0D0D;
+    --portfolio-text: #FFFFFF;
+    --portfolio-muted: #B8B8B8;
+    --portfolio-gold: #C9A45C;
+    --portfolio-border: rgba(255,255,255,.12);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #000000;
+}
+
+.qualification,
+.skills,
+.project,
+.contact {
+    background: var(--portfolio-bg);
+    color: var(--portfolio-text);
+}
+
+.qualification .section-title,
+.skills .section-title,
+.project .section-title,
+.contact .section-title,
+.qualification__title,
+.skills__subtitle,
+.project__title,
+.contact__title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.contact__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contact__box {
+    padding: 1.5rem;
+    background: var(--portfolio-surface);
+    border: 1px solid var(--portfolio-border);
+    border-radius: 12px;
+    transition: transform 250ms ease, border-color 250ms ease, background-color 250ms ease;
+}
+
+.contact__box:hover {
+    transform: translateY(-3px);
+    background: var(--portfolio-surface-hover);
+    border-color: rgba(201,164,92,.38);
+}
+
+.contact__icon {
+    margin-bottom: .75rem;
+    color: var(--portfolio-gold);
+    font-size: 1.5rem;
+}
+
+.contact__title {
+    margin-bottom: .4rem;
+    color: var(--portfolio-text);
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.contact__description {
+    color: var(--portfolio-muted);
+    font-size: .78rem;
+    font-weight: 500;
+}
+
+.footer {
+    background: #000000;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.footer__link {
+    color: var(--portfolio-muted);
+    transition: color 200ms ease;
+}
+
+.footer__link:hover {
+    color: var(--portfolio-gold);
+}
+
+.footer__copy {
+    color: #777777;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .contact__content {
+        grid-template-columns: 1fr;
+    }
+}
