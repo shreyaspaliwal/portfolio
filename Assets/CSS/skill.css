@@ -1,72 +1,103 @@
-.skills__container{
-    row-gap: 2rem;
+/* =========================================================
+   Skill Set
+   ========================================================= */
+
+.skills {
+    background: #000000;
+    color: #ffffff;
 }
 
-.skills__subtitle{
-    font-size: var(--h3-font-size);
-    color: var(--first-color-dark);
-    margin-bottom: var(--mb-2);
-}
-
-.skills__data{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 var(--mb-2);
-    margin-bottom: var(--mb-4);
-}
-
-.skills__name{
+.skills .section-subtitle {
+    display: block;
+    margin-bottom: .65rem;
+    color: #C9A45C;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .16em;
     text-transform: uppercase;
 }
 
-.skills__bar{
+.skills .section-title {
+    margin-bottom: 3rem;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -.03em;
+}
+
+.skills__container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.skills__content {
+    position: relative;
+    min-width: 0;
+    padding: 1.5rem;
+    background: #0A0A0A;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 250ms ease, border-color 250ms ease, background-color 250ms ease;
+}
+
+.skills__content::before {
+    content: "";
     position: absolute;
-    bottom: -.75rem;
-    height: .25rem;
-    background-color: var(--first-color);
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 2px;
+    background: #C9A45C;
 }
 
-.skills__html{
-    width: 80%;
+.skills__content:hover {
+    transform: translateY(-3px);
+    background: #0D0D0D;
+    border-color: rgba(201,164,92,.35);
 }
 
-.skills__css{
-    width: 80%;
+.skills__subtitle {
+    margin-bottom: 1.25rem;
+    color: #ffffff;
+    font-size: .95rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
 }
 
-.skills__js{
-    width: 70%;
+.skills__data {
+    display: flex;
+    align-items: center;
+    min-height: 38px;
+    margin-bottom: .45rem;
+    padding: .55rem .7rem;
+    background: rgba(255,255,255,.025);
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 6px;
+    transition: background-color 200ms ease, border-color 200ms ease, transform 200ms ease;
 }
 
-.skills__java{
-    width: 60%;
+.skills__data:last-child {
+    margin-bottom: 0;
 }
 
-.skills__jsp{
-    width: 60%;
+.skills__data:hover {
+    transform: translateX(3px);
+    background: rgba(201,164,92,.06);
+    border-color: rgba(201,164,92,.18);
 }
 
-.skills__servlet{
-    width: 50%;
+.skills__name {
+    color: #B8B8B8;
+    font-size: .82rem;
+    font-weight: 500;
+    line-height: 1.4;
 }
 
-.skills__mysql{
-    width: 30%;
-}
-
-.skills__python{
-    width: 30%;
-}
-
-.skills__c{
-    width: 70%;
-}
-
-.skills__cpp{
-    width: 60%;
-}
-
-.skills__android{
-    width: 20%;
+@media screen and (max-width: 700px) {
+    .skills__container {
+        grid-template-columns: 1fr;
+    }
 }
