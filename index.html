@@ -48,10 +48,9 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#home" class="nav__link active-link">HOME</a></li>
+                        <li class="nav__item"><a href="#project" class="nav__link">PROJECTS</a></li>
                         <li class="nav__item"><a href="#qualification" class="nav__link">EXPERIENCE & EDUCATION</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">SKILL SET</a></li>
-                        <li class="nav__item"><a href="#project" class="nav__link">PROJECTS</a></li>
-                        <li class="nav__item"><a href="#achievements" class="nav__link">ACHIEVEMENTS</a></li>
                         <li class="nav__item"><a href="https://drive.google.com/file/d/1Hgs6rbRBo0BR9QSCwjh6pujZmynC7J9T/view?usp=sharing" class="nav__link" target="blank">RESUME</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">CONTACT</a></li>
                     </ul>
@@ -71,15 +70,6 @@
         <!-- Hero Content -->
         <div class="hero__content">
 
-           <!-- <div class="hero__profile">
-                <span class="hero__profile-ring"></span>
-                <img
-                    src="./images/profile.jpg"
-                    alt="Shreyas Paliwal"
-                    class="hero__profile-image"
-                >
-            </div> -->
-
             <div class="hero__eyebrow">
                 <span class="hero__eyebrow-line"></span>
                 AI PRODUCT MANAGER · ENTERPRISE AI · B2B SaaS
@@ -89,11 +79,7 @@
                 <span class="hero__headline-line hero__headline-line--strong">
                     Building products
                 </span>
-
-              <!--  <span class="hero__headline-line hero__headline-line--gold">
-                    work
-                </span> -->
-
+                
                 <span class="hero__headline-line hero__headline-line--muted">
                     at the intersection of
                 </span>
@@ -260,7 +246,65 @@
         </div>
 </section>
 
-            
+            <!--Project-->
+            <section class="project section bd-container" id="project">
+                <span class="section-subtitle">My Work</span>
+                <h2 class="section-title">Projects</h2>
+
+                <div class="project__container bd-grid">
+
+                    <div class="project__data">
+                        <i class='bx bxs-store-alt project__icon'></i>
+                        <h3 class="project__title">E-Commerce Website</h3>
+                        <h5 class="project__sub-title">Technologies used: - Java, SpringBoot, HTML, CSS, Thymeleaf, Amazon Web Services(AWS), Docker, Heroku</h5>
+                        <p class="project__description">Created an E-Commerce website using Java and SpringBoot as backend, Thymeleaf to create views and used
+                            HTML, CSS, Bootstrap to create templates to be used for frontend. The website features two sections namely -
+                            User and Admin, separated by the Role-Based Authentication. Used Google OAuth2 for the users to Sign Up
+                            or Sign In using their Google Accounts.</p>
+                        <a href="" class="button button1" target="blank"><i class='bx bxl-github' ></i> GitHub Link</a>
+                        <a href="" class="button button1" target="blank"><i class='bx bx-link'></i> Website Link</a>
+                    </div>
+
+                    <div class="project__data">
+                        <i class='bx bxs-plane-alt project__icon'></i>
+                        <h3 class="project__title">Flight Reservation</h3>
+                        <h5 class="project__sub-title">Technologies used: - Java, SpringBoot,  MySQL, JSP, Amazon Web Services(AWS), Docker</h5>
+                        <p class="project__description">Created a backend application having two microservices named FlightReservation and FlightCheckIn using Java
+                            and SpringBoot as backend, MySQL for database, JSP to create views and REST API to communicate
+                            between both the microservices. Added notifications on email using iTextPDF Maven Repository for the
+                            microservice. Used Logging libraries like LOG4J and SL4J to create log files. The application was containerized
+                            using Docker and deployed on AWS.</p>
+                        <a href="https://github.com/shreyaspaliwal/flightReservation" class="button button1" target="blank"><i class='bx bxl-github' ></i> GitHub(FlightReservation)</a>
+                        <a href="https://github.com/shreyaspaliwal/flightCheckIn" class="button button1" target="blank"><i class='bx bxl-github'></i> GitHub(FlightCheckIn)</a>
+                    </div>
+
+                    <div class="project__data">
+                        <i class='bx bx-spreadsheet project__icon'></i>
+                        <h3 class="project__title">FlaskBlog</h3>
+                        <h5 class="project__sub-title">Technologies used: - Python, Flask, SQLite, HTML, CSS, GitHub, Google Analytics, Heroku</h5>
+                        <p class="project__description">Created a blogging website using Python and Flask in backend, and, used HTML, CSS, Bootstrap to create
+                            templates to be used for frontend, used SQLite for database. To make user’s password secure, used an extension in
+                            flask called as Bcrypt which internally uses hashing algorithm. This website also supports user account with
+                            profiles where users can create, update and delete posts. Also, added the password reset feature.</p>
+                        <a href="https://github.com/shreyaspaliwal/FlaskBlog" class="button button1" target="blank"><i class='bx bxl-github' ></i> GitHub Link</a>
+                        <a href="https://flaskblog-21.herokuapp.com/" class="button button1" target="blank"><i class='bx bx-link'></i> Website Link</a>
+                    </div>
+
+
+                    <div class="project__data">
+                        <i class='bx bxs-data project__icon'></i>
+                        <h3 class="project__title">Student Record Management System</h3>
+                        <h5 class="project__sub-title">Technologies used:- C</h5>
+                        <p class="project__description">Created a CLI application to keep a record of students registered in an institue.</p>
+                        <a href="https://github.com/shreyaspaliwal/Student-Record-Management-System" class="button button1" target="blank"><i class='bx bxl-github' ></i> GitHub Link</a>
+                        <a href="https://youtu.be/EDARcwDvNjw" class="button button1" target="blank"><i class='bx bx-movie-play' ></i> Demo Video</a>
+                    </div>
+
+
+                </div>
+            </section>
+
+
             <!--Qualification-->
             <section class="qualification section bd-container" id="qualification">
                 <span class="section-subtitle">Experience and Education</span>
@@ -492,352 +536,6 @@
                 </div>
             </section>
 
-            <!--Project-->
-            <section class="project section bd-container" id="project">
-                <span class="section-subtitle">My Work</span>
-                <h2 class="section-title">Projects</h2>
-
-                <div class="project__container bd-grid">
-
-                    <div class="project__data">
-                        <i class='bx bxs-store-alt project__icon'></i>
-                        <h3 class="project__title">E-Commerce Website</h3>
-                        <h5 class="project__sub-title">Technologies used: - Java, SpringBoot, HTML, CSS, Thymeleaf, Amazon Web Services(AWS), Docker, Heroku</h5>
-                        <p class="project__description">Created an E-Commerce website using Java and SpringBoot as backend, Thymeleaf to create views and used
-                            HTML, CSS, Bootstrap to create templates to be used for frontend. The website features two sections namely -
-                            User and Admin, separated by the Role-Based Authentication. Used Google OAuth2 for the users to Sign Up
-                            or Sign In using their Google Accounts.</p>
-                        <a href="" class="button button1" target="blank"><i class='bx bxl-github' ></i> GitHub Link</a>
-                        <a href="" class="button button1" target="blank"><i class='bx bx-link'></i> Website Link</a>
-                    </div>
-
-                    <div class="project__data">
-                        <i class='bx bxs-plane-alt project__icon'></i>
-                        <h3 class="project__title">Flight Reservation</h3>
-                        <h5 class="project__sub-title">Technologies used: - Java, SpringBoot,  MySQL, JSP, Amazon Web Services(AWS), Docker</h5>
-                        <p class="project__description">Created a backend application having two microservices named FlightReservation and FlightCheckIn using Java
-                            and SpringBoot as backend, MySQL for database, JSP to create views and REST API to communicate
-                            between both the microservices. Added notifications on email using iTextPDF Maven Repository for the
-                            microservice. Used Logging libraries like LOG4J and SL4J to create log files. The application was containerized
-                            using Docker and deployed on AWS.</p>
-                        <a href="https://github.com/shreyaspaliwal/flightReservation" class="button button1" target="blank"><i class='bx bxl-github' ></i> GitHub(FlightReservation)</a>
-                        <a href="https://github.com/shreyaspaliwal/flightCheckIn" class="button button1" target="blank"><i class='bx bxl-github'></i> GitHub(FlightCheckIn)</a>
-                    </div>
-
-                    <div class="project__data">
-                        <i class='bx bx-spreadsheet project__icon'></i>
-                        <h3 class="project__title">FlaskBlog</h3>
-                        <h5 class="project__sub-title">Technologies used: - Python, Flask, SQLite, HTML, CSS, GitHub, Google Analytics, Heroku</h5>
-                        <p class="project__description">Created a blogging website using Python and Flask in backend, and, used HTML, CSS, Bootstrap to create
-                            templates to be used for frontend, used SQLite for database. To make user’s password secure, used an extension in
-                            flask called as Bcrypt which internally uses hashing algorithm. This website also supports user account with
-                            profiles where users can create, update and delete posts. Also, added the password reset feature.</p>
-                        <a href="https://github.com/shreyaspaliwal/FlaskBlog" class="button button1" target="blank"><i class='bx bxl-github' ></i> GitHub Link</a>
-                        <a href="https://flaskblog-21.herokuapp.com/" class="button button1" target="blank"><i class='bx bx-link'></i> Website Link</a>
-                    </div>
-
-
-                    <div class="project__data">
-                        <i class='bx bxs-data project__icon'></i>
-                        <h3 class="project__title">Student Record Management System</h3>
-                        <h5 class="project__sub-title">Technologies used:- C</h5>
-                        <p class="project__description">Created a CLI application to keep a record of students registered in an institue.</p>
-                        <a href="https://github.com/shreyaspaliwal/Student-Record-Management-System" class="button button1" target="blank"><i class='bx bxl-github' ></i> GitHub Link</a>
-                        <a href="https://youtu.be/EDARcwDvNjw" class="button button1" target="blank"><i class='bx bx-movie-play' ></i> Demo Video</a>
-                    </div>
-
-                    
-                </div>
-            </section>
-
-            <!--Achievements-->
-            <section class="qualification section bd-container" id="achievements">
-                <span class="section-subtitle">Some Insights on me</span>
-                <h2 class="section-title">Achievements</h2>
-
-                <div class="qualification__container bd-grid">
-                    <div class="qualification__content">
-                        <h2 class="qualification__title">
-                            <i class="bx bx-certification qualification__title-icon"></i>
-                            Certifications
-                        </h2>
-                        <a href=" https://media.geeksforgeeks.org/courses/certificates/ef081268c0b93846852157b52d2d3497.pdf" target="blank">
-                        <div class="bd-grid">
-                            <div class="qualification__data">
-                                <h3 class="qualification__area">Fundamentals of Java Collections Framework</h3>
-
-                                <div class="qualification__box">
-                                    <span class="qualification__work">
-                                        <i class="bx bxs-school qualification__icon"></i>
-                                        GeeksForGeeks
-                                    </span>
-
-                                    <span class="qualification__work">
-                                        <i class="bx bx-calendar-alt qualification__icon"></i>
-                                         
-                                         
-                                        [March - 2022] 
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-                        <a href="https://www.hackerrank.com/certificates/fa5491633a05" target="blank">
-                        <div class="bd-grid">
-                            <div class="qualification__data">
-                                <h3 class="qualification__area">Java (Basic)</h3>
-
-                                <div class="qualification__box">
-                                    <span class="qualification__work">
-                                        <i class="bx bxs-school qualification__icon"></i>
-                                        HackerRank 
-                                    </span>
-
-                                    <span class="qualification__work">
-                                        <i class="bx bx-calendar-alt qualification__icon"></i>
-                                        [December - 2020]  
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-
-                        <a href="https://www.hackerrank.com/certificates/4d454fc3bb64" target="blank">
-                        <div class="bd-grid">
-                            <div class="qualification__data">
-                                <h3 class="qualification__area">Python (Basic)</h3>
-
-                                <div class="qualification__box">
-                                    <span class="qualification__work">
-                                        <i class="bx bxs-school qualification__icon"></i>
-                                        HackerRank 
-                                    </span>
-
-                                    <span class="qualification__work">
-                                        <i class="bx bx-calendar-alt qualification__icon"></i>
-                                        [October - 2020]  
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-
-                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/E8LZA9VZAW94" target="blank">
-                        <div class="bd-grid">
-                            <div class="qualification__data">
-                                <h3 class="qualification__area">Python for Everybody Specialization</h3>
-
-                                <div class="qualification__box">
-                                    <span class="qualification__work">
-                                        <i class="bx bxs-school qualification__icon"></i>
-                                        Coursera – University of Michigan 
-                                    </span>
-
-                                    <span class="qualification__work">
-                                        <i class="bx bx-calendar-alt qualification__icon"></i>
-                                        [August – 2020]  
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-                        
-                        <a href="https://www.udemy.com/certificate/UC-26d12465-ab35-4fb6-9af7-b21594dcce72/" target="blank">
-                        <div class="bd-grid">
-                            <div class="qualification__data">
-                                <h3 class="qualification__area">Microsoft SQL</h3>
-
-                                <div class="qualification__box">
-                                    <span class="qualification__work">
-                                        <i class="bx bxs-school qualification__icon"></i>
-                                        Udemy - Brewster Knowlton
-                                        </span>
-
-                                    <span class="qualification__work">
-                                        <i class="bx bx-calendar-alt qualification__icon"></i>
-                                        [August - 2020]  
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-
-                        <a href="https://analytics.google.com/analytics/academy/certificate/TCA5gkYwROii2ItsGm0P7w" target="blank">
-                        <div class="bd-grid">
-                            <div class="qualification__data">
-                                <h3 class="qualification__area">Google Analytics for Beginners</h3>
-
-                                <div class="qualification__box">
-                                    <span class="qualification__work">
-                                        <i class="bx bxs-school qualification__icon"></i>
-                                        Google Analytics Academy 
-                                    </span>
-
-                                    <span class="qualification__work">
-                                        <i class="bx bx-calendar-alt qualification__icon"></i>
-                                        [May – 2020]  
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-
-             
-                        
-                        <a href="https://drive.google.com/file/d/13DDs_FwstHgxEXVs9_idiA7N77hxWKmN/view?usp=sharing" target="blank">
-                        <div class="bd-grid">
-                            <div class="qualification__data">
-                                <h3 class="qualification__area">Programming Techniques using C and C++</h3>
-
-                                <div class="qualification__box">
-                                    <span class="qualification__work">
-                                        <i class="bx bxs-school qualification__icon"></i>
-                                        Hewlett Packard Enterprise
-                                        </span>
-
-                                    <span class="qualification__work">
-                                        <i class="bx bx-calendar-alt qualification__icon"></i>
-                                        [December - 2018]  
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-                        
-                    </div>
-
-                    <div class="qualification__content">
-                        <h2 class="qualification__title">
-                            <i class="bx bx-award qualification__title-icon"></i>
-                            Ratings
-                        </h2>
-
-                        <a href="https://leetcode.com/shreyaspaliwal/" target="blank">
-                            <div class="bd-grid">
-                                <div class="qualification__data">
-                                    <h3 class="qualification__area">Solved 600+ Problems in DSA</h3>
-    
-                                    <div class="qualification__box">
-                                        <span class="qualification__work">
-                                            <i class="bx bxs-school qualification__icon"></i>
-                                            LeetCode 
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            </a>
-    
-
-                        <a href="https://www.hackerrank.com/shreyaspaliwal21" target="blank">
-                        <div class="bd-grid">
-                            <div class="qualification__data">
-                                <h3 class="qualification__area">5 - Star (Gold Badge) in Java</h3>
-
-                                <div class="qualification__box">
-                                    <span class="qualification__work">
-                                        <i class="bx bxs-school qualification__icon"></i>
-                                        HackerRank 
-                                    </span>
-
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-
-                        <a href="https://www.hackerrank.com/shreyaspaliwal21" target="blank">
-                        <div class="bd-grid">
-                            <div class="qualification__data">
-                                <h3 class="qualification__area">5 - Star (Gold Badge) in Python</h3>
-
-                                <div class="qualification__box">
-                                    <span class="qualification__work">
-                                        <i class="bx bxs-school qualification__icon"></i>
-                                        HackerRank 
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-
-                        <a href="https://www.hackerrank.com/shreyaspaliwal21" target="blank">
-                        <div class="bd-grid">
-                            <div class="qualification__data">
-                                <h3 class="qualification__area">5 - Star (Gold Badge) in SQL</h3>
-
-                                <div class="qualification__box">
-                                    <span class="qualification__work">
-                                        <i class="bx bxs-school qualification__icon"></i>
-                                        HackerRank 
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-
-                        <a href="https://auth.geeksforgeeks.org/user/shreyaspaliwal21/profile" target="blank">
-                        <div class="bd-grid">
-                            <div class="qualification__data">
-                                <h3 class="qualification__area">Solved 150+ Problems in DSA</h3>
-
-                                <div class="qualification__box">
-                                    <span class="qualification__work">
-                                        <i class="bx bxs-school qualification__icon"></i>
-                                        Geeks for Geeks 
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-
-                        <a href="https://www.hackerrank.com/shreyaspaliwal21" target="blank">
-                        <div class="bd-grid">
-                            <div class="qualification__data">
-                                <h3 class="qualification__area">4 - Star (Silver Badge) in 30 Days of Code</h3>
-
-                                <div class="qualification__box">
-                                    <span class="qualification__work">
-                                        <i class="bx bxs-school qualification__icon"></i>
-                                        HackerRank 
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-
-                        <a href="https://www.hackerrank.com/shreyaspaliwal21" target="blank">
-                            <div class="bd-grid">
-                                <div class="qualification__data">
-                                    <h3 class="qualification__area">2 - Star (Bronze Badge) in Problem Solving</h3>
-    
-                                    <div class="qualification__box">
-                                        <span class="qualification__work">
-                                            <i class="bx bxs-school qualification__icon"></i>
-                                            HackerRank 
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            </a>
-    
-
-                        <a href="https://ijarcce.com/papers/solar-wind-hybrid-energy-generation-system/" target="blank">
-                            <div class="bd-grid">
-                                <div class="qualification__data">
-                                    <h3 class="qualification__area">Paper Publication - [Solar-Wind Hybrid Energy Generation System]</h3>
-    
-                                    <div class="qualification__box">
-                                        <span class="qualification__work">
-                                            <i class="bx bxs-school qualification__icon"></i>
-                                            International Journal of Advance Research in Computer and Communication Engineering
-                                            [June,2020 Edition] 
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>    
-                        </a>
-                    </div>
-                </div>
-            </section>
 
             <!--Contact-->
             <section class="contact section bd-container" id="contact">
